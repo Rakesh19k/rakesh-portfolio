@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion'
 
 const containerVariants = {
@@ -81,6 +82,39 @@ export default function Experience() {
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
+              whileHover={{ scale: 1.3 }}
+            />
+            <motion.div 
+              className="timeline-content glass"
+              style={{ padding: '20px', marginLeft: '14px' }}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+            >
+              <h3>React Native Learning & Development</h3>
+              <div className="tag" style={{ margin: '6px 0 10px' }}>Self-Paced Learning</div>
+              <ul>
+                <li>React Native fundamentals including components, navigation, and state management.</li>
+                <li>Built cross-platform mobile applications for both iOS and Android using a single codebase.</li>
+                <li>Implemented native modules and third-party libraries for enhanced functionality.</li>
+                <li>Learned mobile app architecture patterns and best practices for performance optimization.</li>
+                <li>Developed responsive UI components that adapt to different screen sizes and orientations.</li>
+                <li>Integrated APIs and backend services for data fetching and real-time updates.</li>
+                <li>Explored advanced topics including animations, gestures, and platform-specific code.</li>
+              </ul>
+            </motion.div>
+          </motion.div>
+          <motion.div 
+            className="timeline-item"
+            variants={itemVariants}
+            whileHover={{ x: 5 }}
+            transition={{ duration: 0.2 }}
+          >
+            <motion.div 
+              className="timeline-bullet"
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
               whileHover={{ scale: 1.3 }}
             />
             <motion.div 

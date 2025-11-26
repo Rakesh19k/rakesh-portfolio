@@ -22,8 +22,7 @@ export default function Hero() {
           </motion.div>
           <h1>Building fast, accessible React apps with delightful UX</h1>
           <p>
-            I am a skilled Frontend Developer with expertise in building scalable web and mobile
-            applications using React.js and related technologies. Based in JP Nagar, Bangalore.
+            I'm a developer specializing in React.js, Next.js, and React Native, creating web and mobile applications with a focus on performance and great user experience.
           </p>
           <div className="cta">
             <motion.a 
