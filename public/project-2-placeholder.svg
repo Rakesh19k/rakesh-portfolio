@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0f1624"/>
+  <rect x="100" y="120" width="1000" height="480" rx="16" fill="#1b2436"/>
+  <g fill="#263247">
+    <rect x="140" y="160" width="420" height="60" rx="8"/>
+    <rect x="140" y="240" width="300" height="60" rx="8"/>
+    <rect x="140" y="320" width="360" height="60" rx="8"/>
+    <rect x="140" y="400" width="280" height="60" rx="8"/>
+  </g>
+  <text x="50%" y="50%" text-anchor="middle" fill="#cbd5e1" font-size="24" font-family="Inter, sans-serif">UI Library Preview</text>
+</svg>
+
+
+

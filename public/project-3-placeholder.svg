@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#0f1624"/>
+  <g fill="#1b2436">
+    <rect x="160" y="220" width="180" height="120" rx="12"/>
+    <rect x="420" y="220" width="180" height="120" rx="12"/>
+    <rect x="680" y="220" width="180" height="120" rx="12"/>
+    <rect x="940" y="220" width="180" height="120" rx="12"/>
+  </g>
+  <g stroke="#263247">
+    <line x1="250" y1="340" x2="510" y2="340"/>
+    <line x1="510" y1="340" x2="770" y2="340"/>
+    <line x1="770" y1="340" x2="1030" y2="340"/>
+  </g>
+  <text x="50%" y="65%" text-anchor="middle" fill="#cbd5e1" font-size="24" font-family="Inter, sans-serif">Microservices Topology</text>
+</svg>
+
+
+

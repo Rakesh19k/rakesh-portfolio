@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="#0f1624"/>
+  <rect x="80" y="80" width="1040" height="560" rx="16" fill="#131b2c" stroke="url(#g)"/>
+  <rect x="120" y="120" width="960" height="120" rx="12" fill="#1b2436"/>
+  <rect x="120" y="260" width="620" height="320" rx="12" fill="#1b2436"/>
+  <rect x="760" y="260" width="320" height="150" rx="12" fill="#1b2436"/>
+  <rect x="760" y="430" width="320" height="150" rx="12" fill="#1b2436"/>
+  <text x="50%" y="50%" text-anchor="middle" fill="#cbd5e1" font-size="24" font-family="Inter, sans-serif">Project Mockup</text>
+</svg>
+
+
+

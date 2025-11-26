@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c5cff;stop-opacity:0.2" />
+      <stop offset="50%" style="stop-color:#22d3ee;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#7c5cff;stop-opacity:0.25" />
+    </linearGradient>
+    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4a261;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#e76f51;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="600" fill="url(#bgGrad)" rx="24"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="60" fill="#7c5cff" opacity="0.1"/>
+  <circle cx="500" cy="500" r="80" fill="#22d3ee" opacity="0.1"/>
+  <circle cx="550" cy="80" r="40" fill="#7c5cff" opacity="0.15"/>
+  
+  <!-- Main avatar circle -->
+  <g transform="translate(300, 300)">
+    <!-- Outer glow ring -->
+    <circle cx="0" cy="0" r="140" fill="none" stroke="url(#bgGrad)" stroke-width="3" opacity="0.5"/>
+    
+    <!-- Profile circle background -->
+    <circle cx="0" cy="0" r="130" fill="#1a1f2e" filter="url(#glow)"/>
+    
+    <!-- Face -->
+    <ellipse cx="0" cy="-20" rx="85" ry="95" fill="url(#faceGrad)"/>
+    
+    <!-- Hair -->
+    <path d="M -95 -35 Q -100 -80 -85 -85 Q -70 -90 -50 -85 Q -30 -88 -10 -85 Q 10 -88 30 -85 Q 50 -90 65 -85 Q 80 -80 85 -35 Z" fill="#2d1810" opacity="0.9"/>
+    
+    <!-- Eyes -->
+    <ellipse cx="-30" cy="-25" rx="12" ry="15" fill="#1a1f2e"/>
+    <ellipse cx="30" cy="-25" rx="12" ry="15" fill="#1a1f2e"/>
+    <circle cx="-30" cy="-25" r="5" fill="#ffffff"/>
+    <circle cx="30" cy="-25" r="5" fill="#ffffff"/>
+    
+    <!-- Nose -->
+    <ellipse cx="0" cy="0" rx="8" ry="12" fill="#d4a574" opacity="0.6"/>
+    
+    <!-- Mouth -->
+    <path d="M -25 20 Q 0 30 25 20" stroke="#8b4a3c" stroke-width="4" fill="none" stroke-linecap="round"/>
+    
+    <!-- Shirt/body -->
+    <ellipse cx="0" cy="85" rx="90" ry="50" fill="#2a3441"/>
+    
+    <!-- Decorative code brackets -->
+    <text x="-90" y="-150" font-family="monospace" font-size="40" fill="#7c5cff" opacity="0.3">{" "}</text>
+    <text x="70" y="-150" font-family="monospace" font-size="40" fill="#7c5cff" opacity="0.3">}</text>
+  </g>
+</svg>
