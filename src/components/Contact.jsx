@@ -43,14 +43,14 @@ const contactMethods = [
     title: 'Location',
     content: 'Thubarahalli, Bangalore',
     link: 'https://maps.google.com/?q=Thubarahalli+Bangalore',
-    color: '#7c5cff',
+    color: '#6366f1',
   },
   {
     icon: <FaPhone />,
     title: 'Phone',
     content: '+91 7488967469',
     link: 'tel:7488967469',
-    color: '#22d3ee',
+    color: '#10b981',
   },
   {
     icon: <FaEnvelope />,
@@ -263,7 +263,7 @@ export default function Contact() {
                   whileFocus={{ 
                     scale: 1.01, 
                     borderColor: 'var(--primary)',
-                    boxShadow: "0 0 0 4px rgba(124, 92, 255, 0.1)"
+                    boxShadow: "0 0 0 4px rgba(99, 102, 241, 0.1)"
                   }}
                   transition={{ duration: 0.2 }}
                 />
@@ -284,7 +284,7 @@ export default function Contact() {
                   whileFocus={{ 
                     scale: 1.01, 
                     borderColor: 'var(--primary)',
-                    boxShadow: "0 0 0 4px rgba(124, 92, 255, 0.1)"
+                    boxShadow: "0 0 0 4px rgba(99, 102, 241, 0.1)"
                   }}
                   transition={{ duration: 0.2 }}
                 />
@@ -305,7 +305,7 @@ export default function Contact() {
                   whileFocus={{ 
                     scale: 1.01, 
                     borderColor: 'var(--primary)',
-                    boxShadow: "0 0 0 4px rgba(124, 92, 255, 0.1)"
+                    boxShadow: "0 0 0 4px rgba(99, 102, 241, 0.1)"
                   }}
                   transition={{ duration: 0.2 }}
                 />

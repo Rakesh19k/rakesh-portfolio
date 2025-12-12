@@ -138,7 +138,7 @@ export default function Projects() {
                       whileHover={{ 
                         scale: 1.15,
                         y: -3,
-                        boxShadow: "0 4px 12px rgba(124, 92, 255, 0.3)"
+                        boxShadow: "0 4px 12px rgba(99, 102, 241, 0.3)"
                       }}
                     >
                       {t}

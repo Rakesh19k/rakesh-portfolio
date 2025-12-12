@@ -118,7 +118,7 @@ export default function Skills() {
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: index * 0.1, ease: "easeOut" }}
                     whileHover={{
-                      boxShadow: "0 0 20px rgba(124, 92, 255, 0.8)"
+                      boxShadow: "0 0 20px rgba(99, 102, 241, 0.8)"
                     }}
                   />
                 </div>

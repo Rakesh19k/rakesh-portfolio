@@ -43,8 +43,8 @@ const BackgroundGraphics = () => {
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         // Alternate colors for variety
         const color = Math.random() > 0.5 
-          ? `rgba(124, 92, 255, ${this.opacity})`
-          : `rgba(34, 211, 238, ${this.opacity})`
+          ? `rgba(99, 102, 241, ${this.opacity})`
+          : `rgba(16, 185, 129, ${this.opacity})`
         ctx.fillStyle = color
         ctx.fill()
       }
@@ -75,8 +75,8 @@ const BackgroundGraphics = () => {
             const opacity = 0.1 * (1 - distance / 150)
             // Alternate connection colors
             const color = Math.random() > 0.5 
-              ? `rgba(124, 92, 255, ${opacity})`
-              : `rgba(34, 211, 238, ${opacity})`
+              ? `rgba(99, 102, 241, ${opacity})`
+              : `rgba(16, 185, 129, ${opacity})`
             ctx.strokeStyle = color
             ctx.lineWidth = 0.5
             ctx.moveTo(particle.x, particle.y)

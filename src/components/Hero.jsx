@@ -115,7 +115,7 @@ export default function Hero() {
               href="#projects"
               whileHover={{ 
                 scale: 1.05,
-                boxShadow: "0 10px 30px rgba(124, 92, 255, 0.4)"
+                boxShadow: "0 10px 30px rgba(99, 102, 241, 0.4)"
               }}
               whileTap={{ scale: 0.95 }}
             >
@@ -158,7 +158,7 @@ export default function Hero() {
             whileHover={{ 
               scale: 1.08, 
               rotate: 3,
-              boxShadow: "0 30px 80px rgba(124, 92, 255, 0.3)"
+              boxShadow: "0 30px 80px rgba(99, 102, 241, 0.3)"
             }}
             animate={{
               y: [0, -10, 0],
