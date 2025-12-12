@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import BackgroundGraphics from './components/BackgroundGraphics'
 
+
 const pageVariants = {
   initial: { opacity: 0 },
   animate: { 
