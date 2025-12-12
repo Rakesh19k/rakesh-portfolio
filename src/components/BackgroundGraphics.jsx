@@ -140,6 +140,52 @@ const BackgroundGraphics = () => {
         <div className="ring ring-1"></div>
         <div className="ring ring-2"></div>
         <div className="ring ring-3"></div>
+        
+        {/* Floating Hexagons */}
+        <div className="hexagon hexagon-1"></div>
+        <div className="hexagon hexagon-2"></div>
+        <div className="hexagon hexagon-3"></div>
+        <div className="hexagon hexagon-4"></div>
+        
+        {/* Rotating Stars */}
+        <div className="star star-1"></div>
+        <div className="star star-2"></div>
+        <div className="star star-3"></div>
+        
+        {/* Pulsing Circles */}
+        <div className="pulse-circle pulse-1"></div>
+        <div className="pulse-circle pulse-2"></div>
+        <div className="pulse-circle pulse-3"></div>
+        
+        {/* Animated Lines */}
+        <div className="animated-line line-1"></div>
+        <div className="animated-line line-2"></div>
+        <div className="animated-line line-3"></div>
+        
+        {/* DNA Helix Structure */}
+        <div className="dna-helix helix-1"></div>
+        <div className="dna-helix helix-2"></div>
+        
+        {/* Floating Particles (SVG) */}
+        <svg className="floating-particles" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+          <circle className="particle-svg p1" cx="100" cy="200" r="2"/>
+          <circle className="particle-svg p2" cx="300" cy="400" r="1.5"/>
+          <circle className="particle-svg p3" cx="500" cy="100" r="1.8"/>
+          <circle className="particle-svg p4" cx="700" cy="600" r="2"/>
+          <circle className="particle-svg p5" cx="900" cy="300" r="1.6"/>
+          <circle className="particle-svg p6" cx="200" cy="800" r="2.2"/>
+          <circle className="particle-svg p7" cx="600" cy="900" r="1.5"/>
+          <circle className="particle-svg p8" cx="850" cy="700" r="1.8"/>
+        </svg>
+        
+        {/* Animated Gradient Orbs */}
+        <div className="gradient-orb gorb-1"></div>
+        <div className="gradient-orb gorb-2"></div>
+        <div className="gradient-orb gorb-3"></div>
+        
+        {/* Mesh Network Lines */}
+        <div className="mesh-network network-1"></div>
+        <div className="mesh-network network-2"></div>
       </div>
       
       {/* Particle Canvas */}
