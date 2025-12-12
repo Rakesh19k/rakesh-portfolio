@@ -145,6 +145,26 @@ body::before {
   animation-delay: -15s;
 }
 
+.blob-5 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(124, 92, 255, 0.25), rgba(124, 92, 255, 0));
+  bottom: 10%;
+  right: 10%;
+  animation-duration: 24s;
+  animation-delay: -8s;
+}
+
+.blob-6 {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.25), rgba(34, 211, 238, 0));
+  top: 10%;
+  left: 50%;
+  animation-duration: 26s;
+  animation-delay: -12s;
+}
+
 @keyframes blob-animate {
   0%, 100% {
     transform: translate(0, 0) scale(1);
@@ -220,6 +240,13 @@ body::before {
   box-shadow: 0 0 20px rgba(124, 92, 255, 0.2);
 }
 
+.ray-4 {
+  left: 40%;
+  animation-duration: 22s;
+  animation-delay: -7s;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.25);
+}
+
 @keyframes ray-rotate {
   0% {
     transform: rotate(0deg);
@@ -274,6 +301,17 @@ body::before {
   box-shadow: 0 0 90px rgba(124, 92, 255, 0.25);
 }
 
+.orb-4 {
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.4), transparent);
+  top: 40%;
+  left: 5%;
+  animation-duration: 19s;
+  animation-delay: -9s;
+  box-shadow: 0 0 70px rgba(34, 211, 238, 0.25);
+}
+
 @keyframes orb-float {
   0%, 100% {
     transform: translate(0, 0) scale(1);
@@ -300,13 +338,212 @@ body::before {
   z-index: 0;
 }
 
+/* Geometric Shapes */
+.geometric-shape {
+  position: absolute;
+  opacity: 0.15;
+  animation: geometric-rotate 20s linear infinite;
+}
+
+.shape-1 {
+  width: 120px;
+  height: 120px;
+  top: 15%;
+  right: 25%;
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.3), rgba(34, 211, 238, 0.3));
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation-duration: 25s;
+  filter: blur(20px);
+}
+
+.shape-2 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 15%;
+  background: linear-gradient(45deg, rgba(34, 211, 238, 0.3), rgba(124, 92, 255, 0.3));
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  animation-duration: 30s;
+  animation-delay: -10s;
+  filter: blur(15px);
+}
+
+.shape-3 {
+  width: 80px;
+  height: 80px;
+  top: 70%;
+  right: 5%;
+  background: linear-gradient(90deg, rgba(124, 92, 255, 0.25), rgba(34, 211, 238, 0.25));
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation-duration: 22s;
+  animation-delay: -5s;
+  filter: blur(18px);
+}
+
+@keyframes geometric-rotate {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(180deg) translate(20px, -20px);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, 0);
+  }
+}
+
+/* Wave Patterns */
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  opacity: 0.1;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(124, 92, 255, 0.2),
+    transparent
+  );
+  animation: wave-move 15s ease-in-out infinite;
+}
+
+.wave-1 {
+  top: 30%;
+  clip-path: polygon(0 50%, 100% 30%, 100% 100%, 0 100%);
+  animation-duration: 20s;
+}
+
+.wave-2 {
+  bottom: 20%;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 50%);
+  animation-duration: 18s;
+  animation-delay: -5s;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(34, 211, 238, 0.2),
+    transparent
+  );
+}
+
+@keyframes wave-move {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+}
+
+/* Gradient Mesh */
+.gradient-mesh {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  opacity: 0.2;
+  filter: blur(80px);
+  animation: mesh-drift 25s ease-in-out infinite;
+}
+
+.mesh-1 {
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(124, 92, 255, 0.4),
+    rgba(34, 211, 238, 0.3),
+    transparent 70%
+  );
+  animation-duration: 30s;
+}
+
+.mesh-2 {
+  bottom: 0;
+  right: 0;
+  background: radial-gradient(
+    circle at 70% 70%,
+    rgba(34, 211, 238, 0.4),
+    rgba(124, 92, 255, 0.3),
+    transparent 70%
+  );
+  animation-duration: 28s;
+  animation-delay: -10s;
+}
+
+@keyframes mesh-drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(20px, 30px) scale(1.05);
+  }
+}
+
+/* Floating Rings */
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid;
+  opacity: 0.15;
+  animation: ring-pulse 12s ease-in-out infinite;
+}
+
+.ring-1 {
+  width: 300px;
+  height: 300px;
+  top: 25%;
+  left: 70%;
+  border-color: rgba(124, 92, 255, 0.4);
+  animation-duration: 15s;
+  filter: blur(1px);
+}
+
+.ring-2 {
+  width: 250px;
+  height: 250px;
+  bottom: 30%;
+  right: 15%;
+  border-color: rgba(34, 211, 238, 0.4);
+  animation-duration: 18s;
+  animation-delay: -6s;
+  filter: blur(1px);
+}
+
+.ring-3 {
+  width: 200px;
+  height: 200px;
+  top: 55%;
+  left: 25%;
+  border-color: rgba(124, 92, 255, 0.3);
+  animation-duration: 14s;
+  animation-delay: -3s;
+  filter: blur(1px);
+}
+
+@keyframes ring-pulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.25;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .blob {
     filter: blur(40px);
   }
   
-  .blob-1, .blob-2, .blob-3, .blob-4 {
+  .blob-1, .blob-2, .blob-3, .blob-4, .blob-5, .blob-6 {
     width: 300px;
     height: 300px;
   }
@@ -315,7 +552,7 @@ body::before {
     filter: blur(30px);
   }
   
-  .orb-1, .orb-2, .orb-3 {
+  .orb-1, .orb-2, .orb-3, .orb-4 {
     width: 120px;
     height: 120px;
   }
@@ -323,17 +560,50 @@ body::before {
   .grid-pattern {
     background-size: 30px 30px;
   }
+  
+  .geometric-shape {
+    opacity: 0.1;
+  }
+  
+  .shape-1, .shape-2, .shape-3 {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .ring-1, .ring-2, .ring-3 {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .gradient-mesh {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 @media (max-width: 480px) {
-  .blob-1, .blob-2, .blob-3, .blob-4 {
+  .blob-1, .blob-2, .blob-3, .blob-4, .blob-5, .blob-6 {
     width: 200px;
     height: 200px;
   }
   
-  .orb-1, .orb-2, .orb-3 {
+  .orb-1, .orb-2, .orb-3, .orb-4 {
     width: 100px;
     height: 100px;
+  }
+  
+  .geometric-shape {
+    display: none;
+  }
+  
+  .ring-1, .ring-2, .ring-3 {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .gradient-mesh {
+    width: 200px;
+    height: 200px;
   }
 }
 

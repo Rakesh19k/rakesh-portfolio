@@ -41,13 +41,17 @@ const BackgroundGraphics = () => {
       draw() {
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(124, 92, 255, ${this.opacity})`
+        // Alternate colors for variety
+        const color = Math.random() > 0.5 
+          ? `rgba(124, 92, 255, ${this.opacity})`
+          : `rgba(34, 211, 238, ${this.opacity})`
+        ctx.fillStyle = color
         ctx.fill()
       }
     }
 
-    // Initialize particles
-    for (let i = 0; i < 50; i++) {
+    // Initialize particles - more for better effect
+    for (let i = 0; i < 80; i++) {
       particles.push(new Particle())
     }
 
@@ -68,7 +72,12 @@ const BackgroundGraphics = () => {
 
           if (distance < 150) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(124, 92, 255, ${0.1 * (1 - distance / 150)})`
+            const opacity = 0.1 * (1 - distance / 150)
+            // Alternate connection colors
+            const color = Math.random() > 0.5 
+              ? `rgba(124, 92, 255, ${opacity})`
+              : `rgba(34, 211, 238, ${opacity})`
+            ctx.strokeStyle = color
             ctx.lineWidth = 0.5
             ctx.moveTo(particle.x, particle.y)
             ctx.lineTo(otherParticle.x, otherParticle.y)
@@ -96,6 +105,8 @@ const BackgroundGraphics = () => {
         <div className="blob blob-2"></div>
         <div className="blob blob-3"></div>
         <div className="blob blob-4"></div>
+        <div className="blob blob-5"></div>
+        <div className="blob blob-6"></div>
         
         {/* Grid Pattern */}
         <div className="grid-pattern"></div>
@@ -104,11 +115,31 @@ const BackgroundGraphics = () => {
         <div className="light-ray ray-1"></div>
         <div className="light-ray ray-2"></div>
         <div className="light-ray ray-3"></div>
+        <div className="light-ray ray-4"></div>
         
         {/* Floating Orbs */}
         <div className="orb orb-1"></div>
         <div className="orb orb-2"></div>
         <div className="orb orb-3"></div>
+        <div className="orb orb-4"></div>
+        
+        {/* Geometric Shapes */}
+        <div className="geometric-shape shape-1"></div>
+        <div className="geometric-shape shape-2"></div>
+        <div className="geometric-shape shape-3"></div>
+        
+        {/* Wave Patterns */}
+        <div className="wave wave-1"></div>
+        <div className="wave wave-2"></div>
+        
+        {/* Gradient Mesh */}
+        <div className="gradient-mesh mesh-1"></div>
+        <div className="gradient-mesh mesh-2"></div>
+        
+        {/* Floating Rings */}
+        <div className="ring ring-1"></div>
+        <div className="ring ring-2"></div>
+        <div className="ring ring-3"></div>
       </div>
       
       {/* Particle Canvas */}
