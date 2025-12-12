@@ -1,6 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
-import { FaReact, FaJsSquare, FaSass, FaCss3Alt, FaHtml5 } from 'react-icons/fa'
-import { SiNextdotjs, SiRedux, SiGraphql, SiTypescript, SiFirebase } from 'react-icons/si'
+import { FaReact, FaJsSquare, FaSass, FaCss3Alt, FaHtml5, FaGit, FaGithub, FaBootstrap, FaPlug } from 'react-icons/fa'
+import { SiNextdotjs, SiRedux, SiGraphql, SiTypescript, SiFirebase, SiExpo, SiExpress, SiSupabase, SiVite, SiTailwindcss, SiBitbucket, SiMui, SiVercel } from 'react-icons/si'
 
 const skills = [
   { name: 'React.js', level: 90, icon: <FaReact />, desc: 'Building dynamic UIs with component architecture' },
@@ -15,8 +16,20 @@ const skills = [
   { name: 'Firebase', level: 70, icon: <SiFirebase />, desc: 'Auth, hosting, and functions' },
   { name: 'Firebase Database', level: 65, icon: <SiFirebase />, desc: 'Realtime data with rules' },
   { name: 'HTML', level: 95, icon: <FaHtml5 />, desc: 'Semantic, accessible markup' },
+  { name: 'Bootstrap', level: 75, icon: <FaBootstrap />, desc: 'Popular CSS framework for responsive design' },
+  { name: 'Material UI', level: 70, icon: <SiMui />, desc: 'React component library implementing Material Design' },
   { name: 'CSS', level: 90, icon: <FaCss3Alt />, desc: 'Responsive layouts with Flexbox/Grid' },
   { name: 'SASS', level: 75, icon: <FaSass />, desc: 'Structured styles and variables' },
+  { name: 'Expo', level: 75, icon: <SiExpo />, desc: 'React Native framework for building mobile apps' },
+  { name: 'Express.js', level: 40, icon: <SiExpress />, desc: 'Node.js web framework for REST APIs' },
+  { name: 'Supabase', level: 65, icon: <SiSupabase />, desc: 'Open-source Firebase alternative with PostgreSQL' },
+  { name: 'Tailwind CSS', level: 85, icon: <SiTailwindcss />, desc: 'Utility-first CSS framework for rapid UI development' },
+  { name: 'WebSocket', level: 75, icon: <FaPlug />, desc: 'Real-time bidirectional communication protocol' },
+  { name: 'Git', level: 85, icon: <FaGit />, desc: 'Distributed version control system' },
+  { name: 'GitHub', level: 80, icon: <FaGithub />, desc: 'Git repository hosting and collaboration platform' },
+  { name: 'Bitbucket', level: 75, icon: <SiBitbucket />, desc: 'Git-based source code repository hosting' },
+  { name: 'Vite', level: 80, icon: <SiVite />, desc: 'Next-generation frontend build tool and dev server' },
+  { name: 'Vercel', level: 75, icon: <SiVercel />, desc: 'Serverless platform for static and dynamic websites' }
 ]
 
 const containerVariants = {

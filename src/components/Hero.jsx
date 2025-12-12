@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion'
 import { FaCode, FaLaptopCode } from 'react-icons/fa'
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
@@ -22,8 +23,7 @@ export default function Hero() {
           </motion.div>
           <h1>Building fast, accessible React apps with delightful UX</h1>
           <p>
-            I'm a developer specializing in React.js, Next.js, and React Native, creating web and mobile applications with a focus on performance and great user experience.
-          </p>
+            Frontend Developer (React.js) passionate about building smooth, responsive, and user-friendly web experiences. Strong in modern JavaScript, UI design principles, and writing clean, maintainable code. Always learning, exploring, and pushing for better user experiences.          </p>
           <div className="cta">
             <motion.a 
               className="btn" 
