@@ -1,25 +1,26 @@
+/* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
 
 const projects = [
   {
     title: 'Plex Player',
     description: 'Plex Player is a cross-platform media player made with React Native. It allows you to stream your media files to your device.',
-    tech: ['React Native', 'TypeScript', 'OAuth','Expo', 'Rapidapi'],
+    tech: ['React Native', 'TypeScript', 'OAuth','Expo', 'Expo Router', 'Rapidapi'],
     github: 'https://github.com/Rakesh19k/plex-player',
     image: 'https://www.plex.tv/wp-content/uploads/2023/05/pms-devices-image.png',
   },
   {
     title: 'Food Recipe App',
     description: 'A mobile application created with React Native to browse, save, and share recipes. Features include recipe search, ingredient filters, and user authentication.',
-    tech: ['React Native', 'TypeScript', 'Expo', 'OAuth'],
+    tech: ['React Native', 'TypeScript', 'Expo', 'Expo Router', 'Rapidapi'],
     github: 'https://github.com/Rakesh19k/food-recipe-app',
     image: 'https://media.daily.dev/image/upload/f_auto,q_auto/v1/posts/750af423600603e1823e6a776589eb3b?_a=AQAEufR',
   },
   {
     title: 'Job Search App',
     description: 'Created with React Native, this app helps users search and apply for jobs, featuring secure authentication and real-time job listings.',
-    tech: ['React Native', 'TypeScript', 'Expo', 'OAuth'],
+    tech: ['React Native', 'TypeScript', 'Expo', 'Expo Router', 'Rapidapi'],
     github: 'https://github.com/Rakesh19k/find-job-app',
     image: 'https://camo.githubusercontent.com/148e311fc3dd4df2a0f35f558978be8660af975cf1a9ad5efede3bd15f2c72a5/68747470733a2f2f692e6962622e636f2f56574d78675a7a2f46696c652d636f7665722d382e706e67',
   },
@@ -74,21 +75,45 @@ export default function Projects() {
             >
               <motion.div 
                 className="project-media"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
-                <img 
+                <motion.img 
                   src={p.image} 
                   alt={`${p.title} mockup`} 
                   loading="lazy" 
                   style={{ 
                     width: '100%', 
-                    height: '250px', // fixed height based on card layout
+                    height: '250px',
                     objectFit: 'cover',
                     borderRadius: '12px'
-                  }} 
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.5 }}
                 />
-                <div className="project-overlay" />
+                <motion.div 
+                  className="project-overlay"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+                <motion.div
+                  className="project-overlay-content"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileHover={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <motion.a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-overlay-btn"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <FaGithub /> View Code
+                  </motion.a>
+                </motion.div>
               </motion.div>
               <div className="project-body">
                 <motion.div 
@@ -102,12 +127,19 @@ export default function Projects() {
                 </motion.div>
                 <p className="project-desc">{p.description}</p>
                 <div className="tech-list">
-                  {p.tech.map((t) => (
+                  {p.tech.map((t, techIndex) => (
                     <motion.span 
                       key={t} 
-                      className="tag"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.2 }}
+                      className="tag tech-tag"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 + techIndex * 0.05 }}
+                      whileHover={{ 
+                        scale: 1.15,
+                        y: -3,
+                        boxShadow: "0 4px 12px rgba(124, 92, 255, 0.3)"
+                      }}
                     >
                       {t}
                     </motion.span>

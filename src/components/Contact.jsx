@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion'
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
@@ -259,7 +260,12 @@ export default function Contact() {
                   type="text" 
                   required 
                   placeholder="John Doe"
-                  whileFocus={{ scale: 1.02, borderColor: 'var(--primary)' }}
+                  whileFocus={{ 
+                    scale: 1.01, 
+                    borderColor: 'var(--primary)',
+                    boxShadow: "0 0 0 4px rgba(124, 92, 255, 0.1)"
+                  }}
+                  transition={{ duration: 0.2 }}
                 />
               </div>
 
@@ -275,7 +281,12 @@ export default function Contact() {
                   type="email" 
                   required 
                   placeholder="john@example.com"
-                  whileFocus={{ scale: 1.02, borderColor: 'var(--primary)' }}
+                  whileFocus={{ 
+                    scale: 1.01, 
+                    borderColor: 'var(--primary)',
+                    boxShadow: "0 0 0 4px rgba(124, 92, 255, 0.1)"
+                  }}
+                  transition={{ duration: 0.2 }}
                 />
               </div>
 
@@ -291,7 +302,12 @@ export default function Contact() {
                   required 
                   placeholder="Hello, I'd like to discuss..."
                   rows="5"
-                  whileFocus={{ scale: 1.01, borderColor: 'var(--primary)' }}
+                  whileFocus={{ 
+                    scale: 1.01, 
+                    borderColor: 'var(--primary)',
+                    boxShadow: "0 0 0 4px rgba(124, 92, 255, 0.1)"
+                  }}
+                  transition={{ duration: 0.2 }}
                 />
               </div>
             </div>

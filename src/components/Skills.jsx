@@ -81,9 +81,28 @@ export default function Skills() {
               whileTap={{ scale: 0.98 }}
             >
               <motion.div 
+                className="skill-icon-wrapper"
                 style={{ fontSize: 28, color: 'var(--accent)' }}
-                whileHover={{ rotate: 360, scale: 1.2 }}
-                transition={{ duration: 0.5 }}
+                whileHover={{ 
+                  rotate: 360, 
+                  scale: 1.2,
+                  filter: "drop-shadow(0 0 15px var(--accent))"
+                }}
+                animate={{
+                  filter: [
+                    "drop-shadow(0 0 5px var(--accent))",
+                    "drop-shadow(0 0 15px var(--accent))",
+                    "drop-shadow(0 0 5px var(--accent))"
+                  ]
+                }}
+                transition={{
+                  duration: 0.5,
+                  filter: {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
               >
                 {s.icon}
               </motion.div>
@@ -92,11 +111,15 @@ export default function Skills() {
                 <div className="skill-desc">{s.desc}</div>
                 <div className="skill-meter" aria-hidden="true">
                   <motion.span 
+                    className="skill-meter-fill"
                     style={{ width: `${s.level}%` }}
                     initial={{ width: 0 }}
                     whileInView={{ width: `${s.level}%` }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: index * 0.1, ease: "easeOut" }}
+                    whileHover={{
+                      boxShadow: "0 0 20px rgba(124, 92, 255, 0.8)"
+                    }}
                   />
                 </div>
                 <div className="sr-only">Proficiency {s.level} percent</div>

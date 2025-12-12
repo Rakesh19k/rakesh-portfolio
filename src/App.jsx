@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import { motion } from 'framer-motion'
 import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -8,9 +10,31 @@ import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
+const pageVariants = {
+  initial: { opacity: 0 },
+  animate: { 
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  },
+  exit: { 
+    opacity: 0,
+    transition: {
+      duration: 0.3
+    }
+  }
+}
+
 function App() {
   return (
-    <div>
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageVariants}
+    >
       <Header />
       <main>
         <Hero />
@@ -21,7 +45,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </div>
+    </motion.div>
   )
 }
 

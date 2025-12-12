@@ -22,6 +22,25 @@ html, body, #root {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--primary-600), var(--accent));
 }
 
 body {
@@ -34,6 +53,33 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(124, 92, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(34, 211, 238, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+  animation: background-shift 20s ease-in-out infinite;
+}
+
+@keyframes background-shift {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
 }
 
 @media (max-width: 768px) {
@@ -58,6 +104,21 @@ img { display: block; max-width: 100%; }
 
 .section {
   padding: 96px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--border), transparent);
+  opacity: 0.3;
+  z-index: -1;
 }
 
 @media (max-width: 768px) {
@@ -86,9 +147,34 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--border);
   border-radius: 14px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
+
+.glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.glass:hover::before {
+  left: 100%;
+}
+
 .glass:hover {
   border-color: rgba(124, 92, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12),
+              0 0 0 1px rgba(124, 92, 255, 0.1);
 }
 
 .btn {
@@ -102,10 +188,57 @@ img { display: block; max-width: 100%; }
   border: 1px solid rgba(255,255,255,0.08);
   cursor: pointer;
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
 }
-.btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(92, 78, 255, 0.25); }
-.btn.secondary { background: transparent; color: var(--text); border-color: var(--border); }
-.btn.ghost { background: var(--surface); color: var(--text); }
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 10px 24px rgba(92, 78, 255, 0.35),
+              0 0 0 1px rgba(124, 92, 255, 0.2);
+}
+
+.btn.secondary { 
+  background: transparent; 
+  color: var(--text); 
+  border-color: var(--border); 
+}
+
+.btn.secondary:hover {
+  background: rgba(124, 92, 255, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn.ghost { 
+  background: var(--surface); 
+  color: var(--text); 
+}
+
+.btn.ghost:hover {
+  background: var(--surface);
+  border-color: var(--primary);
+  color: var(--primary);
+}
 
 .tag {
   display: inline-flex;
@@ -138,8 +271,40 @@ img { display: block; max-width: 100%; }
   margin-bottom: 28px;
   font-size: 28px;
   font-weight: 700;
+  position: relative;
 }
-.section-title .accent { color: var(--accent); }
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 2px;
+  animation: title-underline 1s ease-out;
+}
+
+@keyframes title-underline {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 60px;
+    opacity: 1;
+  }
+}
+
+.section-title .accent { 
+  color: var(--accent);
+  position: relative;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 @media (max-width: 768px) {
   .section-title {
