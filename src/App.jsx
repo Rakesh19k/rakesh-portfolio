@@ -9,6 +9,7 @@ import Experience from './components/Experience'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -45,6 +46,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </motion.div>
   )
 }
