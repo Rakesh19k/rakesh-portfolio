@@ -66,7 +66,7 @@ export default function Education() {
                 transition={{ delay: 0.3, duration: 0.4 }}
                 whileHover={{ scale: 1.05, y: -2 }}
               >
-                <span className="year-text">2022 – Present</span>
+                <span className="year-text">2023 – Present</span>
               </motion.div>
             </div>
           </motion.article>
